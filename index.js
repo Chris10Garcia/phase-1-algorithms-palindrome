@@ -1,14 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+    let wordArray = [...word]
+    let ansArray = []
+
+    for (let i = wordArray.length -1; i >= 0; i--){
+        ansArray.push(wordArray[i])
+    }
+
+    for (let i = wordArray.length -1; i>=0; i--){
+        if (ansArray[i] !== wordArray[i]){
+            return false;
+        }
+    }
+    return true
 }
 
-/* 
-  Add your pseudocode here
-*/
 
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
